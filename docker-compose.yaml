@@ -1,0 +1,87 @@
+version: '3'
+services:
+  Sport_tv:
+    image: reklama
+    build: .
+    volumes:
+      - /home/graph/Project/Advertisement_tracking/videos/Sport_tv:/Projects/Advertisement_tracking/videos
+    command: /bin/sh -c 'python3 reklama_detection.py sport_tv'
+    environment:
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    restart: on-failure
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+        
+  
+  Kinoteatr_tv:
+    image: reklama
+    build: .
+    volumes:
+      - /home/graph/Project/Advertisement_tracking/videos/Kinoteatr:/Projects/Advertisement_tracking/videos
+    command: /bin/sh -c 'python3 reklama_detection.py kinoteatr_tv'
+    environment:
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    restart: on-failure
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  Sevimli_tv:
+    image: reklama
+    build: .
+    volumes:
+      - /home/graph/Project/Advertisement_tracking/videos/Sevimli_tv:/Projects/Advertisement_tracking/videos
+    command: /bin/sh -c 'python3 reklama_detection.py sevimli_tv'
+    environment:
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    restart: on-failure
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  My5_tv:
+    image: reklama
+    build: .
+    volumes:
+      - /home/graph/Project/Advertisement_tracking/videos/My5_tv:/Projects/Advertisement_tracking/videos
+    command: /bin/sh -c 'python3 reklama_detection.py my5_tv'
+    environment:
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    restart: on-failure
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+  
+  Zor_tv:
+    image: reklama
+    build: .
+    volumes:
+      - /home/graph/Project/Advertisement_tracking/videos/Zor_tv:/Projects/Advertisement_tracking/videos
+    command: /bin/sh -c 'python3 reklama_detection.py zor_tv'
+    environment:
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    restart: on-failure
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

@@ -1,0 +1,34 @@
+common:
+  model_name: color_filter_model.pt
+  database_api_url: http://13.233.149.171/api/v1/record/
+  database_username: admin
+  database_password: admin1771
+  frame_width: 640
+  frame_height: 640
+  min_time: 5
+  threshold_time_of_detection: 3
+  company_name: Artel
+
+model:
+  confidence_threshold: 0.85
+  IoU_threshold: 0.45
+  multiple_labels: False
+  amp: False
+
+kinoteatr_tv:
+  stream_url: https://api.itv.uz/hls/iptv/1009/index.m3u8?type=live&&token=artel
+  
+sport_tv:
+  stream_url: https://api.itv.uz/hls/iptv/1004/index.m3u8?type=live&&token=artel
+
+zor_tv:
+  stream_url: https://api.itv.uz/hls/iptv/1016/index.m3u8?type=live&&token=artel
+
+my5_tv:
+  stream_url: https://api.itv.uz/hls/iptv/1217/index.m3u8?type=live&&token=artel
+
+sevimli_tv:
+  stream_url: https://api.itv.uz/hls/iptv/1056/index.m3u8?type=live&&token=artel
+
+renessans_tv:
+  stream_url: https://api.itv.uz/hls/iptv/1221/index.m3u8?type=live&&token=artel
