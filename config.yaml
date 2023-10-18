@@ -10,7 +10,7 @@ common:
   company_name: Artel
 
 model:
-  confidence_threshold: 0.9
+  confidence_threshold: 0.95
   IoU_threshold: 0.45
   multiple_labels: False
   amp: False
