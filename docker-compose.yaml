@@ -4,7 +4,7 @@ services:
     image: reklama_tracking
     build: .
     volumes:
-      - /home/graph/Project/Ad_tracking_with_color_filter/videos:/Projects/Ad_tracking_with_color_filter/videos
+      - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
     command: /bin/sh -c 'python3 reklama_detection.py sport_tv'
     environment:
       - NVIDIA_DRIVER_CAPABILITIES=all
@@ -22,7 +22,7 @@ services:
     image: reklama_tracking
     build: .
     volumes:
-      - /home/graph/Project/Ad_tracking_with_color_filter/videos:/Projects/Ad_tracking_with_color_filter/videos
+      - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
     command: /bin/sh -c 'python3 reklama_detection.py kinoteatr_tv'
     environment:
       - NVIDIA_DRIVER_CAPABILITIES=all
@@ -39,7 +39,7 @@ services:
     image: reklama_tracking
     build: .
     volumes:
-      - /home/graph/Project/Ad_tracking_with_color_filter/videos:/Projects/Ad_tracking_with_color_filter/videos
+      - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
     command: /bin/sh -c 'python3 reklama_detection.py sevimli_tv'
     environment:
       - NVIDIA_DRIVER_CAPABILITIES=all
@@ -56,7 +56,7 @@ services:
     image: reklama_tracking
     build: .
     volumes:
-      - /home/graph/Project/Ad_tracking_with_color_filter/videos:/Projects/Ad_tracking_with_color_filter/videos
+      - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
     command: /bin/sh -c 'python3 reklama_detection.py my5_tv'
     environment:
       - NVIDIA_DRIVER_CAPABILITIES=all
@@ -73,7 +73,7 @@ services:
     image: reklama_tracking
     build: .
     volumes:
-      - /home/graph/Project/Ad_tracking_with_color_filter/videos:/Projects/Ad_tracking_with_color_filter/videos
+      - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
     command: /bin/sh -c 'python3 reklama_detection.py zor_tv'
     environment:
       - NVIDIA_DRIVER_CAPABILITIES=all

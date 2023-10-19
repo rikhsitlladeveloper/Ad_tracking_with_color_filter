@@ -27,7 +27,7 @@ WORKDIR /Projects
 
 RUN apt-get install -y htop 
 
-RUN git clone -b main https://github.com/rikhsitlladeveloper/Ad_tracking_with_color_filter.git
+# RUN git clone -b main https://github.com/rikhsitlladeveloper/Ad_tracking_with_color_filter.git
 
 WORKDIR /Projects/Ad_tracking_with_color_filter
  
@@ -35,6 +35,5 @@ RUN apt-get update && apt-get install -y tzdata
 ENV TZ=Asia/Tashkent
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN git pull
-
 RUN pip install pyyaml
+# RUN git pull

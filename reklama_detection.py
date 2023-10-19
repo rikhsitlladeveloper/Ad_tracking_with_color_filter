@@ -113,7 +113,7 @@ try:
                         "duration": int(detected_time),
                         "channel_name": channel_name,
                         "company_name": company_name,
-                        "video_url": current_directory+video_url,
+                        "video_url": current_directory+"/"+video_url,
                         "data": current_datetime.strftime("%Y-%m-%d"),
                         "time": current_datetime.strftime("%H:%M:%S")
                     }
