@@ -83,7 +83,7 @@ def connect_camera(video_path):
                 time.sleep(reconnection_time)
                 raise Exception("Could not connect to a camera: {0}".format(self.video_path))
 
-            print("Connected to a camera: {}".format(video_path))
+            print("Connected to a camera: {}".format(video_path), flush=True)
 
             break
         except Exception as e:
@@ -110,6 +110,7 @@ try:
         start_time = time.time()
         ret, color_frame = cap.read()
         if not ret:
+            print("Stream stops!", flush=True)
             cap = connect_camera(video_path)
             continue
 
