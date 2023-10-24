@@ -17,6 +17,8 @@ with open('config.yaml', 'r') as file:
     config = yaml.safe_load(file)
 
 video_path = config[channel_name]['stream_url']
+cam_force_address = None
+reconnection_time = config["reconnection_time"]
 model_name = config['common']['model_name']
 database_api_url = config['common']['database_api_url']
 database_username = config['common']['database_username']
@@ -41,12 +43,9 @@ if not os.path.exists(output_folder):
 current_directory = os.getcwd()
 
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-cap = cv2.VideoCapture(video_path)
-frame_rate = cap.get(cv2.CAP_PROP_FPS)
 frame_size = (frame_width, frame_height)
-
-frame_delay = 1 / frame_rate  # Calculate the time delay between frames
 video_writer = False
+blocking = False
 
 def color_filter(frame):
     hsv = cv2.cvtColor(color_frame, cv2.COLOR_BGR2HSV)
@@ -70,6 +69,37 @@ def send_to_database(data):
         print("Failed to send data")
         print("Response:", response.text)
 
+
+def connect_camera(video_path):
+    print("Connecting...")
+    while True:
+        try:
+            if cam_force_address is not None:
+                requests.get(cam_force_address)
+
+            cap = cv2.VideoCapture(video_path)
+
+            if not cap.isOpened():
+                time.sleep(reconnection_time)
+                raise Exception("Could not connect to a camera: {0}".format(self.video_path))
+
+            print("Connected to a camera: {}".format(video_path))
+
+            break
+        except Exception as e:
+            print(e)
+
+            if blocking is False:
+                break
+
+            time.sleep(reconnection_time)
+    
+    return cap
+
+cap = connect_camera(video_path)
+frame_rate = cap.get(cv2.CAP_PROP_FPS)
+frame_delay = 1 / frame_rate  # Calculate the time delay between frames
+
 try:
     detected_time = 0
     det_last_time = 0
@@ -80,7 +110,9 @@ try:
         start_time = time.time()
         ret, color_frame = cap.read()
         if not ret:
+            cap = connect_camera(video_path)
             continue
+
         color_frame = cv2.resize(color_frame ,(frame_width, frame_height))
 
         rgb_image = color_filter(color_frame)
