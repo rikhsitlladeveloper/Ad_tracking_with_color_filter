@@ -81,11 +81,12 @@ def connect_camera(video_path):
 
             if not cap.isOpened():
                 time.sleep(reconnection_time)
-                raise Exception("Could not connect to a camera: {0}".format(self.video_path))
+                raise Exception("Could not connect to a camera: {0}".format(video_path))
 
-            print("Connected to a camera: {}".format(video_path), flush=True)
-
-            break
+            if cap.isOpened():
+                print("Connected to a camera: {}".format(video_path), flush=True)
+                break
+            
         except Exception as e:
             print(e)
 
