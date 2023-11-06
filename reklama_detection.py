@@ -126,7 +126,7 @@ try:
         for det in detections: 
             x1, y1, x2, y2, conf, cls = det.tolist()
             class_name = model.names[int(cls)]
-            if (x1 >= 0 and x1 < frame_width/6 and y1 >= 0 and y1 < frame_height/6 and x2 >= 0 and x2 < frame_width/4 and y2 >= 0 and y2 < frame_height/4 and class_name == company_name):        
+            if (x1 >= 0 and x1 < frame_width/6 and y1 >= 0 and y1 < frame_height/6 and x2 >= 0 and x2 < frame_width/4 and y2 >= 0 and y2 < frame_height/3 and class_name == company_name):        
                 formatted_datetime = current_datetime.strftime("%Y-%m-%d_%H-%M-%S")
                 if data_send :
                     video_url = f"video_{channel_name}_{formatted_datetime}.mp4"
@@ -151,7 +151,7 @@ try:
                         "data": current_datetime.strftime("%Y-%m-%d"),
                         "time": current_datetime.strftime("%H:%M:%S")
                     }
-
+            
                 send_to_database(data)
                 
             else:

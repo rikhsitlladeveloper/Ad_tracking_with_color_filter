@@ -34,4 +34,4 @@ renessans_tv:
   stream_url: https://api.itv.uz/hls/iptv/1221/index.m3u8?type=live&&token=artel
 
 reconnection_stream_url: None
-reconnection_time: 0.5
+reconnection_time: 5
