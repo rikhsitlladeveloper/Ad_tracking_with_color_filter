@@ -1,45 +1,45 @@
 version: '3'
 services:
-  Sport_tv:
-    image: reklama_tracking
-    build: .
-    volumes:
-      - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
-    command: /bin/sh -c 'python3 reklama_detection.py sport_tv'
-    environment:
-      - NVIDIA_DRIVER_CAPABILITIES=all
-    restart: unless-stopped
-    logging:            # Add this section for custom logging configuration
-      driver: "json-file"  # Specify the logging driver (e.g., "json-file")
-      options:
-        max-size: "10m"  # Customize log rotation options
-        max-file: "3"
-        compress: "true"  # Enable log compression
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+  # Sport_tv:
+  #   image: reklama_tracking
+  #   build: .
+  #   volumes:
+  #     - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
+  #   command: /bin/sh -c 'python3 reklama_detection.py sport_tv'
+  #   environment:
+  #     - NVIDIA_DRIVER_CAPABILITIES=all
+  #   restart: unless-stopped
+  #   logging:            # Add this section for custom logging configuration
+  #     driver: "json-file"  # Specify the logging driver (e.g., "json-file")
+  #     options:
+  #       max-size: "10m"  # Customize log rotation options
+  #       max-file: "3"
+  #       compress: "true"  # Enable log compression
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             count: 1
+  #             capabilities: [gpu]
         
   
-  Kinoteatr_tv:
-    image: reklama_tracking
-    build: .
-    volumes:
-      - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
-    command: /bin/sh -c 'python3 reklama_detection.py kinoteatr_tv'
-    environment:
-      - NVIDIA_DRIVER_CAPABILITIES=all
-    restart: unless-stopped
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+  # Kinoteatr_tv:
+  #   image: reklama_tracking
+  #   build: .
+  #   volumes:
+  #     - /home/graph/Project/Ad_tracking_with_color_filter:/Projects/Ad_tracking_with_color_filter
+  #   command: /bin/sh -c 'python3 reklama_detection.py kinoteatr_tv'
+  #   environment:
+  #     - NVIDIA_DRIVER_CAPABILITIES=all
+  #   restart: unless-stopped
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             count: 1
+  #             capabilities: [gpu]
 
   Sevimli_tv:
     image: reklama_tracking

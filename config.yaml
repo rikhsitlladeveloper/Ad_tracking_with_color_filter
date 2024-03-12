@@ -10,28 +10,31 @@ common:
   company_name: Artel
 
 model:
-  confidence_threshold: 0.92
+  confidence_threshold: 0.90
   IoU_threshold: 0.45
   multiple_labels: False
   amp: False
 
 kinoteatr_tv:
-  stream_url: https://api.itv.uz/hls/iptv/1009/index.m3u8?type=live&&token=artel
+  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1009/index.m3u8
   
 sport_tv:
-  stream_url: https://api.itv.uz/hls/iptv/1004/index.m3u8?type=live&&token=artel
+  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1004/index.m3u8
 
 zor_tv:
-  stream_url: https://api.itv.uz/hls/iptv/1016/index.m3u8?type=live&&token=artel
+  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1016/index.m3u8
 
 my5_tv:
-  stream_url: https://api.itv.uz/hls/iptv/1217/index.m3u8?type=live&&token=artel
+  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1217/index.m3u8
 
 sevimli_tv:
-  stream_url: https://api.itv.uz/hls/iptv/1056/index.m3u8?type=live&&token=artel
+  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1056/index.m3u8
 
 renessans_tv:
-  stream_url: https://api.itv.uz/hls/iptv/1221/index.m3u8?type=live&&token=artel
+  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1221/index.m3u8
+
+video:
+  stream_url: '/home/graph/Project/Ad_tracking_with_color_filter/Main.mp4'
 
 reconnection_stream_url: None
 reconnection_time: 5
