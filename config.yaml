@@ -34,7 +34,7 @@ renessans_tv:
   stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1221/index.m3u8
 
 video:
-  stream_url: '/home/graph/Project/Ad_tracking_with_color_filter/Main.mp4'
+  stream_url: Main.mp4
 
 reconnection_stream_url: None
 reconnection_time: 5

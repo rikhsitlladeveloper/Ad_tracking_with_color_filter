@@ -162,7 +162,7 @@ try:
             
         last_time = time.time()
 
-        cv2.imshow(f'{channel_name}', color_image)
+        #cv2.imshow(f'{channel_name}', color_image)
         
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
