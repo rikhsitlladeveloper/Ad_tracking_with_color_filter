@@ -1,6 +1,6 @@
 common:
   model_name: m_model.pt
-  database_api_url: http://13.233.149.171/api/v1/record/
+  database_api_url: https://reklamatvapi.artelelectronics.com/api/v1/record/
   database_username: admin
   database_password: admin1771
   frame_width: 640
@@ -16,25 +16,25 @@ model:
   amp: False
 
 kinoteatr_tv:
-  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1009/index.m3u8
+  stream_url: https://iptv.itv.uz/hls/live/t/7FC-2Hnf6oXxzV8TlhSJ1A/e/1761114950/1009/index.m3u8?user=artel
   
 sport_tv:
-  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1004/index.m3u8
+  stream_url: https://iptv.itv.uz/hls/live/t/lLUdYEaaFra1Vg8yyO6Wog/e/1761114950/1004/index.m3u8?user=artel
 
 zor_tv:
-  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1016/index.m3u8
+  stream_url: https://iptv.itv.uz/hls/live/t/4jwSB8X39EyryRdWSLyz4Q/e/1761114950/1016/index.m3u8?user=artel
 
 my5_tv:
-  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1217/index.m3u8
+  stream_url: https://iptv.itv.uz/hls/live/t/kUX9YZSr80z3P7VZfaDNqA/e/1761114950/1217/index.m3u8?user=artel
 
 sevimli_tv:
-  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1056/index.m3u8
+  stream_url: https://iptv.itv.uz/hls/live/t/dp9gAep9SSVZ23qsFUZb1g/e/1761114950/1056/index.m3u8?user=artel
 
 renessans_tv:
-  stream_url: https://iptv.itv.uz/hls/live/t/d9F2g2ppFtFFkO3JTudDFg/e/1717927107/1221/index.m3u8
+  stream_url: https://iptv.itv.uz/hls/live/t/1N1qH0HwqiMI4KhZ7k7A_w/e/1761114950/1221/index.m3u8?user=artel
 
 video:
-  stream_url: Main.mp4
+  stream_url: Artel TV SuperHero V1 1080p 25s 1.mp4
 
 reconnection_stream_url: None
 reconnection_time: 5
